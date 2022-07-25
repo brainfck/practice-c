@@ -29,6 +29,8 @@ int main(int argc, char** argv){
         if(lcnt >= 10)
             break;
     }
-
+    
+    fclose(from);
+    fclose(to);
     return 0;
 }
