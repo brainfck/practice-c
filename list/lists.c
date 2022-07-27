@@ -39,6 +39,14 @@ struct item *int_array_to_list_start(const int *arr, int len) {
   return first;
 }
 
+void delete_int_list(struct item *list) {
+  while (list) {
+    struct item *tmp = list;
+    list = list->next;
+    free(tmp);
+  }
+}
+
 int int_list_sum(const struct item *list) {
   int sum = 0;
   for (; list; list = list->next) {
@@ -47,7 +55,7 @@ int int_list_sum(const struct item *list) {
   return sum;
 }
 
-void print_list(const struct item *list) {
+void print_int_list(const struct item *list) {
   for (; list; list = list->next) {
     printf("%d \n", list->data);
   }
@@ -56,7 +64,7 @@ void print_list(const struct item *list) {
 int main() {
   int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   struct item *first = int_array_to_list(arr, 10);
-  print_list(first);
+  print_int_list(first);
   int sum = int_list_sum(first);
   printf("Sum: %d \n", sum);
 }
