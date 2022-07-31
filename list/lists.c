@@ -80,10 +80,10 @@ int is_even(int x) { return x % 2 == 0; }
 int is_div7(int x) { return x % 7 == 0; }
 
 int main() {
-  int arr[10] = {-1, -2, 3, 4, 5, 6, -7, 8, 9, 10};
-  struct item *first = int_array_to_list(arr, 10);
-  delete_from_int_list(&first, &is_negative);
-  print_int_list(first);
+  /* int arr[10] = {-1, -2, 3, 4, 5, 6, -7, 8, 9, 10}; */
+  /* struct item *first = int_array_to_list(arr, 10); */
+  /* delete_from_int_list(&first, &is_negative); */
+  /* print_int_list(first); */
   /* int sum = int_list_sum(first); */
   /* printf("Sum: %d \n", sum); */
 }
